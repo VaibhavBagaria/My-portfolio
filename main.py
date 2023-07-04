@@ -1,8 +1,5 @@
 from flask import Flask, render_template, redirect, url_for, request
-from flask_bootstrap import Bootstrap
-from flask_wtf import FlaskForm
-from datetime import datetime
-from tkinter import messagebox
+import flask_bootstrap
 import smtplib
 
 my_gmail="coder.vaibhav21@gmail.com"
@@ -10,7 +7,7 @@ password="odjdimxkwkyeqhyr"
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
-Bootstrap(app)
+flask_bootstrap.Bootstrap(app)
 
 @app.route('/')
 def My_portfolio():
